@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app-container">
+
+        <div class="header-row">
+            <div class="profile-container">
+                <img src="image/image4.jpg" alt="Profile Picture" class="profile-pic">
+            </div>
+            <h1>Microsoft-Inspired To-Do</h1>
+        </div>
+
+        <div class="task-input">
+            <input type="text" id="taskTitle" placeholder="Enter task title..." />
+            <input type="datetime-local" id="taskTime" />
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="task-suggestions">
+            <p>Suggestions: <span id="suggestion">Take a break every 45 mins</span></p>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <div class="contact-section">
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="https://formspree.io/f/xwppjyly" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+                <p id="contactResponse"></p>
+            </form>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
